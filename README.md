@@ -9,9 +9,11 @@ Supported tags and respective `Dockerfile` links
 What is oauth2_proxy?
 =====================
 
-This is a lightweight Docker container for: 
+This is a lightweight Docker container (based on Alpine Linux) for:
 
 https://github.com/bitly/oauth2_proxy
+
+**oauth2_proxy** is a reverse proxy that provides authentication with Google, Github or other provider.
 
 
 Usage example
