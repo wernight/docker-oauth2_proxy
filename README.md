@@ -21,7 +21,7 @@ Usage example
 
     docker run --rm -it wernight/oauth2_proxy oauth2_proxy --help
 
-Follow [their directions](https://github.com/bitly/oauth2_proxy)
+Follow [their directions](https://github.com/bitly/oauth2_proxy#oauth-provider-configuration)
 to set up.
 
 
