@@ -1,7 +1,7 @@
-FROM gliderlabs/alpine:3.6
+FROM alpine:3.8
 
-
-RUN apk add --no-cache tini \
+RUN set -x \
+  && apk add --no-cache tini \
   && apk add --no-cache curl \
   && export OAUTH2_PROXY_VERSION=2.0.1.linux-amd64.go1.4.2 \
   && curl -sL \

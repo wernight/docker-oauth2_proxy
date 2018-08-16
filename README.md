@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/wernight/docker-oauth2_proxy.svg?style=svg)](https://circleci.com/gh/wernight/docker-oauth2_proxy)
+
 Supported tags and respective `Dockerfile` links
 ================================================
 
@@ -7,7 +9,7 @@ Supported tags and respective `Dockerfile` links
 What is oauth2_proxy?
 =====================
 
-This is a lightweight (12.8 MB!) docker container for: 
+This is a lightweight Docker container for: 
 
 https://github.com/bitly/oauth2_proxy
 
