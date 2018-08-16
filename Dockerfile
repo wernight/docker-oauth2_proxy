@@ -3,10 +3,8 @@ FROM alpine:3.8
 RUN set -x \
   && apk add --no-cache tini \
   && apk add --no-cache curl \
-  && export OAUTH2_PROXY_VERSION=2.0.1.linux-amd64.go1.4.2 \
-  && curl -sL \
-    "https://github.com/bitly/oauth2_proxy/releases/download/v2.0.1/oauth2_proxy-$OAUTH2_PROXY_VERSION.tar.gz" | \
-    tar xzvC /tmp \
+  && LATEST_OAUTH2_PROXY_RELEASE=$(curl -sSL https://api.github.com/repos/bitly/oauth2_proxy/releases/latest | grep browser_download_url | grep linux-amd64 | head -n 1 | cut -d '"' -f 4) \
+  && curl -sL "$LATEST_OAUTH2_PROXY_RELEASE" | tar xzvC /tmp \
   && mv /tmp/oauth2_proxy-*/oauth2_proxy /bin/ \
   && rm -rf /tmp/oauth2_proxy* \
   && chmod +x /bin/oauth2_proxy \
